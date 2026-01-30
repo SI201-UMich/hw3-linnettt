@@ -166,10 +166,6 @@ def main():
     box.distribute_session()
     box.tally_distribution()
 
-def main():
-    coupon_cards = []
-
-
 
 # -----------------------
 # Tests (about 3–4 per function)
