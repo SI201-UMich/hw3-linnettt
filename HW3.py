@@ -166,6 +166,9 @@ def main():
     box.distribute_session()
     box.tally_distribution()
 
+def main():
+    coupon_cards = []
+
 
 
 # -----------------------
