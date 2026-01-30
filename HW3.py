@@ -14,10 +14,7 @@ from contextlib import redirect_stdout
 
 
 class CouponDispenser:
-    def __init__(self, coupon_cards):
-        self.coupon_cards = coupon_cards
-        self.customer_roster = []
-        self.issued_indices = []
+
     """
     CouponDispenser manages a box of coupon cards and assigns one coupon
     to each unique name entered by the user during a session.
@@ -30,6 +27,9 @@ class CouponDispenser:
     """
 
     def __init__(self, coupon_cards):
+        self.coupon_cards = coupon_cards
+        self.customer_roster = []
+        self.issued_indices = []
         """
         Initialize a new CouponDispenser object.
 
@@ -40,6 +40,10 @@ class CouponDispenser:
         pass
 
     def __str__(self):
+        if not self.coupon_cards:
+            return ""
+        return "|".join(self.coupon_cards)
+        
         """
         Return a single string with all coupons in coupon_cards joined by pipes ('|').
         If coupon_cards is empty, return an empty string "".
