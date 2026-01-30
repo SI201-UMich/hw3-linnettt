@@ -87,6 +87,28 @@ class CouponDispenser:
         pass
 
     def distribute_session(self):
+        round_number = 1
+        while True:
+            prompt = f"Round {round_number} Enter a name, or type 'show', or 'exit': "
+            user_input = input(prompt)
+
+            if user_input == "exit":
+                print("Goodbye!")
+                break
+            elif user_input == "show":
+                for i in range(len(self.customer_roster)):
+                    name = self.customer_roster[i]
+                    coupon = self.coupon_cards[self.issued_indices[i]]
+                    print(f"{name}: {coupon}")
+            else:
+                pieces = user_input.split(",")
+                for piece in pieces:
+                    stripped_name = piece.strip()
+                    if stripped_name:
+                        result = self.issue_coupon(stripped_name)
+                        print(result)
+                        
+            round_number += 1
         """
         Run the "coupon dispenser" session.
 
