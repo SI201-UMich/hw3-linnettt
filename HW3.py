@@ -89,7 +89,7 @@ class CouponDispenser:
     def distribute_session(self):
         round_number = 1
         while True:
-            prompt = f"Round {round_number} Enter a name, or type 'show', or 'exit': "
+            prompt = f"Round {round_number} - Enter a name (or a comma-separated list), or type 'show' or 'exit': "
             user_input = input(prompt)
 
             if user_input == "exit":
@@ -154,13 +154,6 @@ class CouponDispenser:
 
 
 def main():
-    """
-    Driver function:
-      - Define the coupon_cards list (example coupons below)
-      - Create a CouponDispenser
-      - Start the interaction via distribute_session()
-      - After exit, call tally_distribution() to print the distribution in the terminal
-    """
     coupon_cards = [
         "10% off",
         "Free small coffee",
@@ -169,10 +162,10 @@ def main():
     ]
 
     # Uncomment the lines below as you implement each function.
-    # box = CouponDispenser(coupon_cards)
-    # box.distribute_session()
-    # box.tally_distribution()
-    pass
+    box = CouponDispenser(coupon_cards)
+    box.distribute_session()
+    box.tally_distribution()
+
 
 
 # -----------------------
@@ -452,5 +445,5 @@ def test():
 
 if __name__ == "__main__":
     main()
-    # test()
+    #test()
 
