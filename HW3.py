@@ -1,4 +1,4 @@
-# Name:
+# Name: Xinyi Peng
 # Student ID:
 # Email:
 # Who or what you worked with on this homework (including generative AI like ChatGPT):
@@ -14,6 +14,10 @@ from contextlib import redirect_stdout
 
 
 class CouponDispenser:
+    def __init__(self, coupon_cards):
+        self.coupon_cards = coupon_cards
+        self.customer_roster = []
+        self.issued_indices = []
     """
     CouponDispenser manages a box of coupon cards and assigns one coupon
     to each unique name entered by the user during a session.
