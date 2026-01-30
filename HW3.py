@@ -30,6 +30,7 @@ class CouponDispenser:
         self.coupon_cards = coupon_cards
         self.customer_roster = []
         self.issued_indices = []
+
         """
         Initialize a new CouponDispenser object.
 
@@ -55,6 +56,14 @@ class CouponDispenser:
         pass
 
     def issue_coupon(self, name):
+        if not self.coupon_cards:
+            return "The box is empty."
+        if name in self.customer_roster:
+            idx_in_roster = self.customer_roster.index(name)
+            coupon_idx = self.issued_indices[idx_in_roster]
+            existing_coupon = self.coupon_cards[coupon_idx]
+            return f"That name already has a coupon: {existing_coupon}"
+        
         """
         Assign name with a random coupon. If name is already assigned a coupon, return it.
         If the list coupon_cards is empty, return:
@@ -68,6 +77,12 @@ class CouponDispenser:
         Returns:
             str: message as described above
         """
+
+        random_idx = random.randint(0, len(self.coupon_cards) - 1)
+        self.customer_roster.append(name)
+        self.issued_indices.append(random_idx)
+        return self.coupon_cards[random_idx]
+    
         # TODO: Implement per instructions
         pass
 
