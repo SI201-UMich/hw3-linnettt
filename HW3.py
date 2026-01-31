@@ -1,12 +1,12 @@
 # Name: Xinyi Peng
-# Student ID:
-# Email:
-# Who or what you worked with on this homework (including generative AI like ChatGPT):
+# Student ID: 82080230
+# Email: xinyip@umich.edu
+# Who or what you worked with on this homework (including generative AI like ChatGPT): I worked with Yuhei Ni (Tracy) on this assignment. I also used gemini. I use gemini for small proportion of codes that I cannot figure out, and also few bugs.
 # If you worked with generative AI also add a statement for how you used it.
-# e.g.:
+# e.g.: 
 # Asked ChatGPT hints for debugging and suggesting the general structure of the code
 # Did your use of GenAI on this assignment align with your goals and guidelines in 
-#    your Gen AI contract? If not, why?
+#    your Gen AI contract? If not, why? Yes, I use it after my own tries and discussion with coworker.
 
 import random
 import io
